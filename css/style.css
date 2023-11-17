@@ -1,7 +1,7 @@
 /* GENERAL */
 
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ html{
 }
 
 .big-container{
-    width: 100%;
+    width: calc(100vh -100px);
     margin: 0 auto;
 }
 
@@ -24,81 +24,131 @@ ul li{
     list-style: none;
     margin-right: 10px;
     margin-top: 10px;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: #6D6D6D;
 }
 
 .container-menu-tendina{
-    width: 20%;
-    background-color: green;
-    border: 2px solid black;
+    width: 200px;
+    height: calc(100vh - 80px);
+    background-color: black;
+    color: #6D6D6D;
+    font-size: 0.9em;
+    position: relative;
 }
 
 .container-main-principal{
-    width: 80%;
-    background-color: red;
-    border: 2px solid blue;
+    width: calc(100% - 200px);
+    height: calc(100vh - 80px);
+    background-color: #141922;
+    color: white;
+    overflow: auto;
 }
 
-
-section  > div *{
-    border: 1px dashed black;
+.prova{
+    color: black;
+    margin-top: 100px;
 }
 
-.container-menu-tendina > div *{
-    border: 1px dashed black;
+.container-red{
+    padding: 20px;
 }
 
-.container-menu-tendina > *{
-    border: 1px solid black;
+h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-section > *{
-    border: 1px solid black;
+.container-red p{
+    margin-bottom: 10px;
 }
 
 
 /*MAIN*/
 
+.container-header-main{
+    width: calc(100% - 200px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: end;
+    padding: 10px;
+}
+
+button{
+    padding: 5px;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+img{
+    width: 100%;
+}
+
+.img-special{
+    border-radius: 100px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+
 .logo-spotify{
     margin-bottom: 20px;
 }
 
-.libreria-brani{
+.libreria-brani > div *{
     margin-bottom: 10px;
 }
 
 .menu-tendina-bottom{
-    margin-top: 100%;
+    position: absolute;
+    bottom: 5px;
+}
+
+.absolute{
+    position: absolute;
+    bottom: 0;
 }
 
 .header-main-upgrade{
     justify-content: flex-end;
 }
 
-.container-header-main{
-    width: 100%;
-    height: 8%;
-    background-color: yellow;
+.list-track{
+    padding: 20px;
+    text-align: center;
+    margin-right: 15px;
+    color: #6D6D6D;
+    font-size: 0.9em;
 }
 
-.scelta-track{
-    color: white;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 20px;
+.short-menu-tendina{
+    display: none;
 }
 
 .padding-menu-tendina, .padding-header-main{
     padding: 10px;
 }
 
-.my-row-16{
-    padding: 20px;
+.my-row-16, .my-row-33{
+    margin-left: -10px;
+    margin-right: -10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 
-.my-col{
+.my-col-speciall{
     width: calc((100% / 6) - 20px);
     margin-left: 10px;
     margin-right: 10px;
@@ -106,12 +156,31 @@ section > *{
 
 h3{
     color: white;
-    padding: 20px;
+}
+
+#sezione-3 h3 {
+    margin-top: 60px;
 }
 
 hr{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.playlist{
+    margin-top: 20px;
+}
+
+.name-user{
+    color: white;
+}
+
+h4, h5{
+    text-align: center;
+}
+
+h5{
+    color: #6D6D6D;
 }
 
 
@@ -124,7 +193,8 @@ hr{
 
 footer{
     width: 100%;
-    background-color: grey;
+    height: 80px;
+    background-color: #282828;
 }
 
 .footer-padding-container{
@@ -138,25 +208,17 @@ footer{
 /*I BREAKPOINT*/
 @media screen and (max-width: 1100px){
 
-    .scelta-track{
-        width: 100%;
-        margin: auto;
-    }
-   
-    #section-1 .my-col-speciall{
+
+    .my-col-speciall{
         width: calc((100% / 4) - 20px);
         margin-right: 10px;
         margin-left: 10px;
     }
 
-    #section-1 .my-col-speciall{
+    .my-col-speciall{
         margin-bottom: 30px;
     }
 
-    .menu-tendina-bottom {
-        margin-top: 145%;
-    }
-    
     }
 
 
@@ -165,6 +227,29 @@ footer{
 /*II BREAKPOINT*/
 @media screen and (max-width: 700px){
 
+    .libreria-brani, .playlist{
+        margin-top: 20px;
+    }
+
+
+    .my-col-speciall{
+        width: calc((100% / 2) - 20px);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .my-col-speciall{
+        margin-bottom: 50px;
+    }
+
+    .my-row-track{
+        text-align: center;
+    }
+
+    .my-col-track{
+        width: calc((100% / 3) - 20px);
+    }
+
     }
 
 
@@ -172,5 +257,33 @@ footer{
 
 /*III BREAKPOINT*/
 @media screen and (max-width: 600px){
+
+    .short-menu-tendina{
+        display: block;
+    }
+
+    .extended-menu-tendina{
+        display: none;
+    }
+
+    .logo-spotify > img{
+        width: 30px;
+    }   
+
+    .container-menu-tendina i{
+        text-align: center;
+    }
+
+    .container-main-principal{
+        width: calc(100% - 50px);
+    }
+
+    .container-menu-tendina{
+        width: 50px;
+    }
+
+    .container-header-main{
+        width: calc(100% - 50px)
+    }
 
     }
