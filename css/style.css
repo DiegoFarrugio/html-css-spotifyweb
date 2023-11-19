@@ -27,10 +27,48 @@ ul li{
     display: inline-block;
 }
 
+img{
+    width: 100%;
+}
+
 a{
     text-decoration: none;
     color: #6D6D6D;
 }
+
+
+
+/*HOVER*/
+
+.libreria-brani :hover, .playlist-hover :hover, li :hover, ul :hover,
+.menu-tendina-bottom :hover{
+    color: white;
+}
+
+.footer-left-icon :hover{
+    color: red;
+}
+
+.icon-commands-song :hover{
+    width: 20px;
+    color: white;
+}
+
+.running-time-song :hover{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    transition: 1s;
+}
+
+.button-1 :hover{
+    margin-right: 40px;
+}
+
+
+
+
+/*MAIN*/
 
 .container-menu-tendina{
     width: 200px;
@@ -49,11 +87,6 @@ a{
     overflow: auto;
 }
 
-.prova{
-    color: black;
-    margin-top: 100px;
-}
-
 .container-red{
     padding: 20px;
 }
@@ -66,9 +99,6 @@ h3{
 .container-red p{
     margin-bottom: 10px;
 }
-
-
-/*MAIN*/
 
 .container-header-main{
     width: calc(100% - 200px);
@@ -89,10 +119,6 @@ button{
     border-color: white;
 }
 
-img{
-    width: 100%;
-}
-
 .img-special{
     border-radius: 100px;
 }
@@ -110,6 +136,7 @@ h2{
     margin-bottom: 10px;
 }
 
+
 .menu-tendina-bottom{
     position: absolute;
     bottom: 5px;
@@ -125,7 +152,7 @@ h2{
 }
 
 .list-track{
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     margin-right: 15px;
     color: #6D6D6D;
@@ -158,6 +185,25 @@ h3{
     color: white;
 }
 
+.img-container{
+    position: relative;
+}
+
+.play-song-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 1.5em;
+}
+
+.img-container:hover .play-song-icon{
+    display: block;
+}
+
+
+
 #sezione-3 h3 {
     margin-top: 60px;
 }
@@ -189,17 +235,110 @@ h5{
 }
 
 
+
 /*FOOTER*/
 
 footer{
     width: 100%;
     height: 80px;
     background-color: #282828;
+    color: white;
 }
 
 .footer-padding-container{
-    padding: 30px;
+    padding: 15px;
+    justify-content: space-between;
 }
+
+.left-footer-container img{
+    width: 40px;
+}
+
+.left-footer-container > div{
+    margin-right: 10px;
+}
+
+.left-footer-container{
+    align-items: center;
+    width: 20%;
+}
+
+.left-footer-container .footer-name-track{
+    font-size: 0.7em;
+    color: #6D6D6D;
+}
+
+.left-footer-container .footer-name-album{
+    font-size: 0.9em;
+}
+
+.bar-song{
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left-icon{
+    margin-left: 20px;
+}
+
+.bar-player{
+    height: 4.5px;
+    border-radius: 30px;
+    width: 100%;
+    background-color: grey;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.running-time-song{
+    height: 4.5px;
+    border-radius: 30px;
+    width: 40%;
+    background-color: white;
+}
+
+.icon-commands-song{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.center-footer-container > * i{
+    margin-right: 15px;
+}
+
+.center-footer-container{
+    width: 50%;
+}
+
+.right-footer-container{
+    width: 20%;
+    align-items: center;
+}
+
+.right-footer-container > * i{
+    margin-right: 13px;
+}
+
+.bar-volume-song{
+    height: 4.5px;
+    border-radius: 30px;
+    width: 40%;
+    background-color: grey;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.rule-volume-song{
+    height: 4.5px;
+    border-radius: 30px;
+    width: 15%;
+    background-color: white;
+}
+
+
+
+
 
 
 
